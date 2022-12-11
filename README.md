@@ -1,5 +1,5 @@
 # Basketball App
-This app displays stats of various basketball teams. The app uses API from [balldontlie.io](balldontlie.io). 
+This app displays stats of various basketball teams. The app uses API from [balldontlie.io](https://www.balldontlie.io/). 
 
 ## Current Features
 
