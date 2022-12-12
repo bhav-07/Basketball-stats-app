@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
       final team = Team(
         abbreviation: eachTeam['abbreviation'],
         city: eachTeam['city'],
+        name: eachTeam['name'],
       );
       teams.add(team);
     }
@@ -25,6 +26,9 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
+      // appBar: AppBar(title: const Text("Stats App",),shadowColor: Colors.transparent,),
+      backgroundColor: Colors.grey,
       body: SafeArea(
         child: FutureBuilder(
             future: getTeams(),
@@ -42,8 +46,11 @@ class HomePage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(8),
                         ),
                         child: ListTile(
+                          textColor: Colors.black,
                           title: Text(teams[index].abbreviation),
                           subtitle: Text(teams[index].city),
+                          trailing: Text(teams[index].name),
+
                         ),
                       ),
                     );
